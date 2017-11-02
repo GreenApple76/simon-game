@@ -104,7 +104,13 @@ html {
     padding: 0;
 }
 
+body {
+    background-color: #5e5353;
+    font-family: 'Open Sans', sans-serif;
+}
+
 h1 {
+    font-family: 'Paytone One', sans-serif;
     margin: 0;
     margin-top: .35rem;
     padding: 0;
@@ -114,7 +120,7 @@ h1 {
 }
 
 .container {
-    width: 13rem;
+    width: 12rem;
     margin: 0 auto;
     padding: 0;
 }
@@ -122,7 +128,8 @@ h1 {
 .outer-circle {
     width: 10rem;
     height: 10rem;
-    margin: 1rem;
+    margin-top: .5rem;
+    margin-left: .5rem;
     border-radius: 50%;
     background-color: #000;
     padding: .5rem;
@@ -136,20 +143,55 @@ h1 {
 }
 
 .green {
-  background-color:green;
-  border-top-left-radius: 100%;
+    background-color: #00A74A;
+    border-top-left-radius: 100%;
 }
+
 .red {
-  background-color:red;
-  border-top-right-radius: 100%;
+    background-color: #9F0F17;
+    border-top-right-radius: 100%;
 }
+
 .yellow {
-  background-color: yellow;
-  border-bottom-left-radius: 100%;
+    background-color: #CCA707;
+    border-bottom-left-radius: 100%;
 }
+
 .blue {
-  background-color: blue;
-  border-bottom-right-radius: 100%;
+    background-color: #094A8F;
+    border-bottom-right-radius: 100%;
+}
+
+.green-active {
+    background: #5f5; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #afa 0%, #5f5 68%, #0f0 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #afa 0%,#5f5 68%,#0f0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #afa 0%,#5f5 68%,#0f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afa', endColorstr='#0f0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.red-active {
+    background: #ff5555; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #faa 0%, #ff5555 68%, #ff0000 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #faa 0%,#ff5555 68%,#ff0000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #faa 0%,#ff5555 68%,#ff0000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faa', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.yellow-active {
+    background: #ff5; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #ffa 0%, #ff5 68%, #ff0 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #ffa 0%,#ff5 68%,#ff0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #ffa 0%,#ff5 68%,#ff0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa', endColorstr='#ff0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.blue-active {
+    background: #55f; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #aaf 0%, #55f 68%, #00f 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #aaf 0%,#55f 68%,#00f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #aaf 0%,#55f 68%,#00f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaf', endColorstr='#00f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .inner-circle {
@@ -171,6 +213,8 @@ h1 {
 }
 
 .count {
+    font-size: .75rem;
+    letter-spacing: .1rem;
     margin-left: .5rem;
 }
 
@@ -188,7 +232,7 @@ h1 {
 .strict {
     width: .5rem;
     height: .5rem;
-    background-color: yellow;
+    background-color: #CCA707;
     border: .05rem solid gray;
     border-radius: 50%;
     position: absolute;
@@ -198,9 +242,24 @@ h1 {
 }
 
 .labels {
-    font-family: 'Open Sans', sans-serif;
     font-size: .375rem;
     margin-top: -.25rem;
+}
+
+.win, .error {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .55rem;
+    font-weight: 900;
+    color: #008000;
+    letter-spacing: -.005rem;
+    margin-top: -.25rem;
+    margin-left: -.25rem;
+}
+
+.error {
+    color: #f00;
+    letter-spacing: .0125rem;
+    margin-left: -.125rem;
 }
 
 .count-label {
@@ -336,6 +395,20 @@ h1 {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+/* tablets */
+@media (min-width: 768px) {
+    html {
+        font-size: 3rem;
+    }
+}
+
+/* desktops */
+@media (min-width: 940px) {
+    html {
+        font-size: 3.5rem;
+    }
+}
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
